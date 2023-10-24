@@ -26,4 +26,5 @@ class Square:
 
     ''' public instance '''
     def area(self):
+        ''' Methode to get the area '''
         return(self.__size * self.__size)

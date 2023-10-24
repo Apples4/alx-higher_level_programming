@@ -43,9 +43,11 @@ class Square:
 
     ''' public instance '''
     def area(self):
+        ''' Method to calculate the area '''
         return(self.__size * self.__size)
 
     def my_print(self):
+        ''' Method to print the area and posistion '''
         if self.__size == 0:
             print("")
 
