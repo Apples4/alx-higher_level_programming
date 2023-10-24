@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defining a Class called Square to print squares based on position and area"""
+"""Defining a class Square to print squares based on position and area"""
 
 
 class Square:
@@ -11,14 +11,14 @@ class Square:
         self.__size = size
         self.__position = position
 
-    """ getter function to get the size of the square """
     @property
     def size(self):
+        """ getter function to get the size of the square """
         return self.__size
 
-    """ setter function """
     @size.setter
     def size(self, value):
+        """ setter function """
         if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -27,13 +27,13 @@ class Square:
             self.__size = value
 
     @property
-    """ getter function for position """
     def position(self):
+        """ getter function for position """
         return self.__position
 
-    """ setter function for position """
     @position.setter
     def position(self, value):
+        """ setter function for position """
         if (not isinstance(value, tuple) or
                 len(value) != 2 or
                 not all(isinstance(element, int) for element in value) or
@@ -51,7 +51,7 @@ class Square:
 
         print("\n" * self.__position[1], end="")
         for i in range(0, self.__size):
-            print(" " * self.__position[0], end="")
+            print("_" * self.__position[0], end="")
             for j in range(0, self.__size):
                 print("#", end="")
             print("")
