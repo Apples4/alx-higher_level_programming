@@ -5,4 +5,5 @@ Class that defines a rectangle
 
 
 class Rectangle:
+    ''' Class type rectangle '''
     pass
