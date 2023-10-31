@@ -5,8 +5,17 @@ Class that defines a rectangle
 
 
 class Rectangle:
+    ''' this represents a rectangle '''
 
     def __init__(self, width=0, height=0):
+        ''' init function
+        Args:
+            width: width of the rectangle
+            height: height of the rectangle
+        Raises:
+            ValueError: height must be >= 0
+            TypeError: height must be an intege
+        '''
         self.width = width
         self.height = height
 
@@ -41,14 +50,17 @@ class Rectangle:
         self.__width = value
 
     def area(self):
+        ''' Returns the area of the rectangle'''
         return self.__width * self.__height
 
     def perimeter(self):
+        ''' Returns the perimeter of the rectangle'''
         if (self.__width == 0 or self.__height == 0):
             return 0
         return (2 * (self.__width + self.__height))
 
     def __str__(self):
+        ''' function that prints the square '#' '''
         if (self.__width == 0 or self.__height == 0):
             return
 

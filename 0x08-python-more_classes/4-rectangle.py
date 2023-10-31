@@ -5,10 +5,19 @@ Class that defines a rectangle
 
 
 class Rectangle:
+    ''' this represents a rectangle '''
 
     def __init__(self, width=0, height=0):
-        self.width = width
-        self.height = height
+        ''' init function
+        Args:
+            width: width of the rectangle
+            height: height of the rectangle
+        Raises:
+            ValueError: height must be >= 0
+            TypeError: height must be an intege
+        '''
+        self.__width = width
+        self.__height = height
 
     @property
     def height(self):
@@ -41,16 +50,19 @@ class Rectangle:
         self.__width = value
 
     def area(self):
+        ''' area function '''
         return self.__width * self.__height
 
     def perimeter(self):
+        ''' parameter function '''
         if (self.__width == 0 or self.__height == 0):
             return 0
         return (2 * (self.__width + self.__height))
 
     def __str__(self):
+        ''' function that prints the square '#' '''
         if (self.__width == 0 or self.__height == 0):
-            return("")
+            return
 
         print_area = []
         for i in range(self.__height):
@@ -60,4 +72,5 @@ class Rectangle:
         return ("".join(print_area))
 
     def __repr__(self):
+        ''' the builtin function prints details '''
         return ("Rectangle({}, {})".format(self.__width, self.__height))

@@ -5,13 +5,22 @@ Class that defines a rectangle
 
 
 class Rectangle:
+    ''' this represents a rectangle '''
 
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        self.width = width
-        self.height = height
+        ''' init function
+        Args:
+            width: width of the rectangle
+            height: height of the rectangle
+        Raises:
+            ValueError: height must be >= 0
+            TypeError: height must be an integer
+        '''
+        self.__width = width
+        self.__height = height
         type(self).number_of_instances += 1
 
     @property
@@ -69,22 +78,23 @@ class Rectangle:
             return rect_2
 
     def __str__(self):
-        ''' builtin function '''
+        ''' function that prints the square '#' '''
         if (self.__width == 0 or self.__height == 0):
             return("")
 
         print_area = []
         for i in range(self.__height):
-            [print_area.append(str(self.print_symbol)) for j in range(self.__width)]
+            [print_area.append(str(self.print_symbol))
+                for j in range(self.__width)]
             if i != self.__height - 1:
                 print_area.append("\n")
         return ("".join(print_area))
 
     def __repr__(self):
-        ''' Builtin function '''
+        ''' the builtin function prints details '''
         return ("Rectangle({}, {})".format(self.__width, self.__height))
 
     def __del__(self):
-        ''' builtin function '''
+        ''' the builtin del function '''
         print("Bye rectangle...")
         type(self).number_of_instances -= 1
