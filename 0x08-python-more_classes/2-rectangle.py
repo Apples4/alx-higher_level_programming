@@ -8,8 +8,8 @@ class Rectangle:
     ''' this represents a rectangle '''
 
     def __init__(self, width=0, height=0):
-        ''' init function 
-        Args: 
+        ''' init function
+        Args:
             width: width of the rectangle
             height: height of the rectangle
         Raises:
