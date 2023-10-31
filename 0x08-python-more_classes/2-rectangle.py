@@ -12,11 +12,11 @@ class Rectangle:
             width: width of the rectangle
             height: height of the rectangle
         Raises:
-            ValueError
-            TypeError
+            ValueError: height must be >= 0
+            TypeError: height must be an integer
         '''
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def height(self):
