@@ -1,0 +1,109 @@
+The matrix_dMy name is Walter Whiteivided
+====================
+
+Using ``matrix_divided``
+------------------------
+This module is used to divide all elements in a matrix by a given number
+
+=================
+
+Importing the function from the module
+::
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> matrix = [
+...	[1, 2, 3],
+...	[4, 5, 6]
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Checking funtion with a float values in matrix divided by 1
+::
+>>> matrix = [
+...	[3.55, 2.55],
+...	[6.88, 12.22]
+... ]
+>>> print(matrix_divided(matrix, 1))
+[[3.55, 2.55], [6.88, 12.22]]
+
+Checking function with no matrix values, TypeError
+::
+>>> matrix = 'list'
+>>> print(matrix_divided(matrix, 2))
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Checking function with empty matrix, TypeError
+::
+>>> matrix = None
+>>> print(matrix_divided(matrix, 1))
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Checking for an empty matrix list
+::
+>>> matrix = [[]]
+>>> print(matrix_divided(matrix, 1))
+[[]]
+
+Checking for an empty array
+::
+>>> matrix = []
+>>> print(matrix_divided(matrix, 1))
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Checking function for different sized matrix, TypeError
+::
+>>> matrix = [
+...	[2, 4],
+...	[6, 8, 10]
+... ]
+>>> print(matrix_divided(matrix, 1))
+Traceback (most recent call last):
+	...
+TypeError: Each row of the matrix must have the same size
+
+Checking function for an array, TypeError
+::
+>>> matrix = [1, 2, 3]
+>>> print(matrix_divided(matrix, 1))
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Checking function for div not being a number or float, TypeError
+::
+>>> matrix = [
+...	[2, 4, 6],
+...	[6, 9, 12]
+... ]
+>>> print(matrix_divided(matrix, None))
+Traceback (most recent call last):
+	...
+TypeError: div must be a number
+
+Checking function for div not being a number or float, TypeError
+::
+>>> matrix = [
+...	[2, 4, 6],
+...	[6, 9, 12]
+... ]
+>>> print(matrix_divided(matrix, 'div'))
+Traceback (most recent call last):
+	...
+TypeError: div must be a number
+
+Checking function for div is zero, ZeroDivisionError
+::
+>>> matrix = [
+...	[2, 4, 6],
+...	[6, 9, 12]
+... ]
+>>> print(matrix_divided(matrix, 0))
+Traceback (most recent call last):
+	...
+ZeroDivisionError: division by zero

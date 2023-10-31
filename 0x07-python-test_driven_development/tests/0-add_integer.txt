@@ -1,0 +1,43 @@
+The add_integer module
+
+-----------------
+
+This module is the unit test for the add_interger function  
+
+-----------------
+
+Importing the function from the module:
+>>> add_integer = __import__('0-add_integer').add_integer	
+>>> add_integer(1, 3)
+4
+
+Checking for function addition with negative ints:
+::
+>>> add_integer(-1, 2)
+1
+
+Checking function addition with one args, a = 1
+::
+>>> add_integer(1)
+99
+
+Checking function with strings, ValueError
+::        
+>>> add_integer('a', 98)         
+Traceback (most recent call last):
+	...                 
+ValueError: invalid literal for int() with base 10: 'a'
+
+Checking function with variables, NameError for a
+::
+>>> add_integer(a, 5)
+Traceback (most recent call last):
+	...
+NameError: name 'a' is not defined
+
+Checking function with variables, NameError for both a and b
+::
+>>> add_integer(a, b)
+Traceback (most recent call last):
+	...
+NameError: name 'a' is not defined

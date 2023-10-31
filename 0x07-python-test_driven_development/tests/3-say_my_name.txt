@@ -1,0 +1,32 @@
+The print name function
+=======================
+
+Using 'say_my_name'
+----------------------
+This module is used to print the users first and last name
+
+====================
+Importing the function from the module
+::
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+Checking module with different strings
+::
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+Checking function with a non string entry
+::
+>>> say_my_name(12, "White")
+Traceback (most recent call last):
+	...
+TypeError: first_name must be a string
+
+Checking function with a non string last name
+::
+>>> say_my_name("King", 1)
+Traceback (most recent call last):
+	...
+TypeError: last_name must be a string

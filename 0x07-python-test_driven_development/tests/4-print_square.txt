@@ -1,0 +1,44 @@
+The print squares function
+=========================
+
+Using print_square
+----------------------
+This module is used to print the users square of a certian size
+
+====================
+Importing the functio from the module
+::
+>>> print_square = __import__('4-print_square').print_square
+>>> print_square(4)
+####
+####
+####
+####
+
+Checking function with another number
+::
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+Checking function with float
+::
+>>> print_square(2.5)
+Traceback (most recent call last):
+	...
+TypeError: size must be an integer
+
+Checking function with non int
+::
+>>> print_square('a')
+Traceback (most recent call last):
+	...
+TypeError: size must be an integer
