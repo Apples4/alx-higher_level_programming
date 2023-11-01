@@ -52,6 +52,16 @@ class Max_integer(unittest.TestCase):
         max_mid = [1, 100, 2]
         self.assertEqual(max_integer(max_mid), 100)
 
+    def test_neg(self):
+        ''' function to test negative number in a list '''
+        neg_one = [1, -5, 2]
+        self.assertEqual(max_integer(neg_one), 2)
+
+    def test_all_neg(self):
+        ''' function to test negative int in list '''
+        neg_list = [-1, -2, -3]
+        self.assertEqual(max_integer(neg_list), -1)
+
     def test_str(self):
         ''' function to test for non int input '''
         str_inp = ['a', 'b', 12]
