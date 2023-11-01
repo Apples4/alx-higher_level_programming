@@ -4,7 +4,7 @@
 import unittest
 ''' importing unittest module '''
 
-max_integer = __import__('6-max_integer_test').max_integer
+max_integer = __import__('6-max_integer').max_integer
 
 
 class Max_integer(unittest.TestCase):
