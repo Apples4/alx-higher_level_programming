@@ -26,15 +26,14 @@ Checking for function str input
 
 Checking function for none
 ::
->>> text_indentation()
+>>> text_indentation(None)
 Traceback (most recent call last):
 	...
-TypeError: text_indentation() missing 1 argument: 'text'
+TypeError: text must be a string
 
 Checking function for two arguments
 ::
 >>> text_indentation("Bruce", "Lee")
-::
 Traceback (most recent call last):
 	...
 TypeError: text_indentation takes 1 postional arguemnt
