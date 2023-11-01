@@ -24,6 +24,21 @@ Checking for function str input
 :
 <BLANKLINE>
 
+Checking function for none
+::
+>>> text_indentation()
+Traceback (most recent call last):
+	...
+TypeError: text_indentation() missing 1 argument: 'text'
+
+Checking function for two arguments
+::
+>>> text_indentation("Bruce", "Lee")
+::
+Traceback (most recent call last):
+	...
+TypeError: text_indentation takes 1 postional arguemnt
+
 Checking for non str input
 >>> text_indentation(1)
 Traceback (most recent call last):
