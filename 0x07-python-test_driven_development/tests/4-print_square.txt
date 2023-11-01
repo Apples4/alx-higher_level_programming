@@ -36,6 +36,20 @@ Traceback (most recent call last):
 	...
 TypeError: size must be an integer
 
+Checking function for argument None
+::
+>>> print_square(None)
+Traceback (most recent call last):
+	...
+TypeError: size must be an integer
+
+Checking function for negative int
+::
+>>> print_square(-4)
+Traceback (most recent call last):
+	...
+ValueError: size must be >= 0
+
 Checking function with non int
 ::
 >>> print_square('a')
