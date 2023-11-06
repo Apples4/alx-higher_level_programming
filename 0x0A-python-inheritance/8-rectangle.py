@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
 '''
 Class has two function, area(self) and
 integer_validator(self, name, value)
 '''
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):

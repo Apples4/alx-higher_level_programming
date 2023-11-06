@@ -9,6 +9,7 @@ class BaseGeometry:
     '''
     This is an empty class
     '''
+
     def area(self):
         '''
         This is a public function for area
@@ -29,9 +30,7 @@ class BaseGeometry:
             TypeError: <name> must be an integer
             ValueError: <name> must be greater than 0
         '''
-        self.name = name
-        self.value = value
-        if type(self.value) != int:
-            raise TypeError("{} must be an integer".format(self.name))
-        if self.value <= 0:
-            raise ValueError("{} must be greater than 0".format(self.name))
+        if type(value) != int:
+            raise TypeError("{} must be an integer".format(name))
+        if value <= 0:
+            raise ValueError("{} must be greater than 0".format(name))
