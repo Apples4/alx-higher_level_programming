@@ -1,0 +1,40 @@
+Single Inheritance
+-------------------
+This module prints a list that is sorted in ascending order for ints
+for function def print_sorted(self)
+
+====================
+Importing the class from the module
+::
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(4)
+>>> my_list.print_sorted()
+[1, 2, 3, 4]
+
+Checking function with negative values
+::
+>>> my_list = MyList([-1, 4, 2, 12, 10])
+>>> my_list.print_sorted()
+[-1, 2, 4, 10, 12]
+
+Checking function for only only negative number
+::
+>>> my_list = MyList([-1, -10, -100])
+>>> my_list.print_sorted()
+[-100, -10, -1]
+
+Checking function with no inputs
+::
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+
+Checking function with 1 input in list
+::
+>>> my_list = MyList([10])
+>>> my_list.print_sorted()
+[10]
