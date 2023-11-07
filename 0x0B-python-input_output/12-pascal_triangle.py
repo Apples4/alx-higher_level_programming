@@ -5,6 +5,13 @@ Module that has one function
 
 
 def pascal_triangle(n):
+    '''
+    Args:
+        n: input number for pascal triangele
+
+    Return:
+        Pascal triangel based on n
+    '''
     if n <= 0:
         return []
     triangle = [[1]]
