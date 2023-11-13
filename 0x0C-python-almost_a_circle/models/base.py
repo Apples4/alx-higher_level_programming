@@ -25,7 +25,7 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-    
+
     @staticmethod
     def to_json_string(list_dictionaries):
         '''
@@ -40,7 +40,7 @@ class Base:
     def save_to_file(cls, list_objs):
         '''
         writes the JSON string representation of list_objs to a file
-        
+
         Args:
             list of objects of this class
         '''
@@ -49,7 +49,7 @@ class Base:
             for i in list_objs:
                 list_dict.append(cls.to_dictionary(i))
 
-        with open (cls.__name__ + '.json', 'w') as f:
+        with open(cls.__name__ + '.json', 'w') as f:
             f.write(cls.to_json_string(list_dict))
 
     @staticmethod
@@ -64,7 +64,7 @@ class Base:
         if json_string is None:
             return []
         return json.loads(json_string)
-    
+
     @classmethod
     def create(cls, **dictionary):
         '''
@@ -88,7 +88,7 @@ class Base:
             that returns a list of instances
         '''
         try:
-            with open (cls.__name__ + '.json', 'r') as f:
+            with open(cls.__name__ + '.json', 'r') as f:
                 list_dictionaries = Base.from_json_string(f.read())
                 return [cls.create(**dici) for dici in list_dictionaries]
         except IOError:
