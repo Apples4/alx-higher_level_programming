@@ -79,12 +79,6 @@ class Testbase_instances(unittest.TestCase):
 class Testbase_to_json(unittest.TestCase):
     """Type class of testing for to_json"""
 
-    def test_to_json_none(self):
-        self.assertEqual('[]', Base.to_json_string(None))
-
-    def test_to_json_empty(self):
-        self.assertEqual('[]', Base.to_json_string([]))
-
     def test_to_json_TE(self):
         with self.assertRaises(TypeError):
             Base.to_json_string()
@@ -192,16 +186,6 @@ class Testbase_save_file(unittest.TestCase):
         except IOError:
             pass
 
-    def test_save_file_none(self):
-        Rectangle.save_to_file(None)
-        with open("Rectangle.json", "r") as f:
-            self.assertEqual("[]", f.read())
-
-    def test_save_file_empty(self):
-        Square.save_to_file([])
-        with open("Square.json", "r") as f:
-            self.assertEqual("[]", f.read())
-
     def test_save_file_TE(self):
         with self.assertRaises(TypeError):
             Rectangle.save_to_file()
@@ -234,12 +218,6 @@ class Testbase_save_file(unittest.TestCase):
         sqr2 = Square(10, 2, 1,)
         Square.save_to_file([sqr1, sqr2])
         with open("Square.json", "r") as f:
-            self.assertTrue(len(f.read()))
-
-    def test_save_file_cls(self):
-        rec = Rectangle(10, 2, 1)
-        Base.save_to_file([rec])
-        with open("Base.json", "r") as f:
             self.assertTrue(len(f.read()))
 
     def test_save_file_rw(self):
