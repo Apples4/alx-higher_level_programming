@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-from sys import argv
-import requests
-
 """
 Write a Python script that
 takes your GitHub credentials
 """
+
+from sys import argv
+import requests
 
 if __name__ == "__main__":
 
