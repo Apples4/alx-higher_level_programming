@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-import requests
-
 """
 script that fetches
 https://alx-intranet.hbtn.io/status
 """
+
+import requests
+
 if __name__ == "__main__":
 
     print("Body response:")
