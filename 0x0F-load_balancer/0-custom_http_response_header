@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # configuring server with load balance
 
 sudo apt-get update

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # install a configure HAproxy on your lb-01 server
 
 sudo apt-get update
