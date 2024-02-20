@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+""" convert data to csv """
+
 import csv
 import requests
 import sys
