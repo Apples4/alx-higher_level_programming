@@ -33,8 +33,3 @@ if __name__ == '__main__':
 
     with open('USER_ID.json', 'w') as f:
         json.dump({user_id: tasks}, f)
-        for task in todos:
-            json.dump(
-                    [{"task": task["title"],
-                      "completed": task["completed"],
-                      "username": user_name}], f)
